@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Address Book</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="JT-styles.css">
+<script src="JT-addressBook.js"></script>
+<div class="topnav">
+  <a class="active" href="http://ict-458.nmsu.edu/~jeremyt/">Home</a>
+  <a href="mypodcast.html"> My Podcast</a>
+  <a href="contactme.html"> Contact me</a>
+  <a href="resources.html"> Resources</a>
+  <a href="JT-addressBook.html"> Address Book</a>
+  <a href="Backendtech.html"> Backend Tech</a>
+</div>
+
+
+</head>
+
+<body>
+<h2> This is the address book. It is used as a way to enter and store data. When a user lands on this page there will be a form to add contact information such as (name, city, address, email, phone number, and hometown).
+When the user clicks the add button at the top of the webpage it will open a form and have 2 buttons at the bottom.
+After the user has clicked the add button they have the option to input and store information with the "Add Now" button (this button is tied to the addToBook function that will push the data to local storage), or they can cancel with the "cancel" button. If they cancel it will delete any information that was typed and nothing will be saved.
+This is becasue we have a clearForm function that will delete the filled but not submitted form form memory.
+If all of the fields are not filled out it will not submit the form by using an addToBook function that has and isNull statement that will check if all the fields have dont have an empty string value. 
+Using the showAddressBook function it will display the address on the webpage if it is in the local storage.
+This webpage uses onClick event listeners to know when to use these functions that are associated with the proper button.
+This form also has a delete function that will delete the data from storage with the removeEntry function. 
+THe jsonstructure function basically allows use to contruct variables and create objects.
+</h2>
+<div class="container">
+		<div class="title">
+			<h1>Address Book</h1>
+		</div>
+		<div class="quickadd"><button id="QuickAdd">+ Add</button></div>
+		<div class="quickaddForm">
+			<label for="fullname">Name</label><input type="text" id="fullname" class="formFields">
+			<label for="phone">Phone</label><input type="text" id="phone" class="formFields">
+			<label for="address">Address</label><textarea name="address" id="address" cols="30" rows="10" class="formFields"></textarea>
+			<label for="city">City</label><input type="text" id="city" class="formFields">
+			<label for="email">E-Mail</label><input type="text" id="email" class="formFields">
+			<label for="hometown">Hometown</label><input type="text" id="hometown" class="formFields">
+			<br><br>
+			<button id="Add">Add Now</button><button id="Cancel">Cancel</button>
+		</div>
+		<div class="addbook">
+			<div class="entry">
+				<div class="name"><p>Sachin Bhatnagar</p></div>
+				<div class="email"><p>sachin@frameboxx.in</p></div>
+				<div class="phone"><p>9316523541</p></div>
+				<div class="address"><p>House No. 8, Sector 10 - A</p></div>
+				<div class="city"><p>Chandigarh</p></div>
+				<div class="del"><a href="#">Delete</a></div>
+			</div> 
+		</div>
+   </div>
+</body>
+</html>
